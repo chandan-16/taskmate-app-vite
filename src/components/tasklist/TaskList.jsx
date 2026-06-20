@@ -13,13 +13,15 @@ export const TaskList = () => {
 
   return (
     <>
+    <div className="tasklist">
     <h1>Taskmate App</h1>
       <button onClick={() => setShow(!show)}>{show ? 'Hide Task' : 'Show Task'}</button>
       {
         show && tasks.map((task) => (
           <TaskCard key={task.id} task={task} handleDelete={handleDelete} />
       ))
-      }  
+      } 
+    </div> 
     </>
   )
 }
