@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { TaskCard } from "../taskCard/taskCard";
-import { taskData } from './../../data/data';
 
-export const TaskList = () => {
 
-  const [tasks, setTasks] = useState(taskData);
+export const TaskList = ({tasks, setTasks}) => {
+
   const [show, setShow] = useState(true);
 
   const handleDelete = (id) => {
